@@ -7,13 +7,26 @@ module Api
       end
 
       def show
+        invoice = Invoice.find(params[:id])
+				render(json: {status: 'Success', message:'Invoice', data: invoice}, status: :ok)
       end
 
-      def new
+      def create
+        invoice = Invoice.new(invoice_params)
+				if invoice.save
+					render(json: {status: 'SUCCESS', message:'Saved invoice', data: invoice}, status: :ok)
+				else
+					render(json: {status: 'ERROR', message:'Invoice not saved', data: invoice.erros}, status: :unprocessable_entity)
+				end
       end
 
       def edit
       end
+
+      private
+			def invoice_params
+				params.permit(:enrollment_id, :expiration_date, :invoice_value, :status)
+			end
     end
   end
 end
