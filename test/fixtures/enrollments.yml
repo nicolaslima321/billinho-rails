@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_name: MyString
+  institution_id: 
+  invoice_quantity: 1.5
+  student_id: 
+  total_price: 1.5
+
+two:
+  course_name: MyString
+  institution_id: 
+  invoice_quantity: 1.5
+  student_id: 
+  total_price: 1.5

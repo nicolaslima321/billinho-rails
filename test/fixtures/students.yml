@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  birth_date: 2021-02-25
+  celphone: MyString
+  cpf: MyString
+  genre: MyString
+  name: MyString
+  payment_method: MyString
+
+two:
+  birth_date: 2021-02-25
+  celphone: MyString
+  cpf: MyString
+  genre: MyString
+  name: MyString
+  payment_method: MyString
