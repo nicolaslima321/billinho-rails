@@ -20,8 +20,11 @@ module Api
 				end
       end
 
-      def edit
-      end
+      def destroy
+				invoice = Invoice.find(params[:id])
+				invoice.destroy
+				render(json: {status: 'SUCCESS', message:'Deleted invoice', data: invoice}, status: :ok)
+			end
 
       private
 			def invoice_params

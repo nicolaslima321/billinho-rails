@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Enrollment.create(course_name: 'Análise e Desenvolvimento de Sistemas', institution_id: 1, expiration_date: '26/03/2022', invoice_quantity: 4, student_id: 1, total_price: 100.00)
+Enrollment.create(course_name: 'Análise e Desenvolvimento de Sistemas', institution_id: 1, expiration_day: 15, invoice_quantity: 4, student_id: 1, total_price: 100.00)
 
 Institution.create(cnpj: '102901923', kind: 'Presencial', name: 'Lorem University')
 

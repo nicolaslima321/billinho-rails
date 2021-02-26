@@ -20,8 +20,11 @@ module Api
 				end
       end
 
-      def edit
-      end
+      def destroy
+				institution = Institution.find(params[:id])
+				institution.destroy
+				render(json: {status: 'SUCCESS', message:'Deleted institution', data: institution}, status: :ok)
+			end
 
       private
 			def institution_params

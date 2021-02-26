@@ -4,5 +4,5 @@ class Enrollment < ApplicationRecord
     validates :invoice_quantity, presence: true
     validates :student_id, presence: true
     validates :total_price, presence: true
-    validates :expiration_date, presence: true
+    validates :expiration_day, presence: true
 end

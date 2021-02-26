@@ -6,7 +6,7 @@ class CreateEnrollments < ActiveRecord::Migration[5.2]
       t.float :invoice_quantity
       t.integer :student_id
       t.float :total_price
-      t.date :expiration_date
+      t.integer :expiration_day
 
       t.timestamps
     end

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_224850) do
     t.float "invoice_quantity"
     t.integer "student_id"
     t.float "total_price"
-    t.date "expiration_date"
+    t.integer "expiration_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
