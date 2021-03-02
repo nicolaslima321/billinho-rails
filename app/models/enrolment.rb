@@ -1,4 +1,4 @@
-class Enrollment < ApplicationRecord
+class Enrolment < ApplicationRecord
 	validates :course_name, presence: true
     validates :institution_id, presence: true
     validates :invoice_quantity, presence: true

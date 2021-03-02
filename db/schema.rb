@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_02_25_224850) do
 
-  create_table "enrollments", force: :cascade do |t|
+  create_table "enrolments", force: :cascade do |t|
     t.string "course_name"
     t.integer "institution_id"
     t.float "invoice_quantity"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_224850) do
   end
 
   create_table "invoices", force: :cascade do |t|
-    t.integer "enrollment_id"
+    t.integer "enrolment_id"
     t.date "expiration_date"
     t.float "invoice_value"
     t.string "status"

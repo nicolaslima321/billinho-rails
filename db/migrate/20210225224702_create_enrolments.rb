@@ -1,6 +1,6 @@
-class CreateEnrollments < ActiveRecord::Migration[5.2]
+class CreateEnrolments < ActiveRecord::Migration[5.2]
   def change
-    create_table :enrollments do |t|
+    create_table :enrolments do |t|
       t.string :course_name
       t.integer :institution_id
       t.float :invoice_quantity

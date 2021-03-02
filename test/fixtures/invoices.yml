@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  enrollment_id: 
+  enrolment_id: 
   expiration_date: 2021-02-25
   invoice_value: 1.5
   status: MyString
 
 two:
-  enrollment_id: 
+  enrolment_id: 
   expiration_date: 2021-02-25
   invoice_value: 1.5
   status: MyString

@@ -33,7 +33,7 @@ module Api
 
       private
 			def invoice_params
-				params.permit(:enrollment_id, :expiration_date, :invoice_value, :status)
+				params.permit(:enrolment_id, :expiration_date, :invoice_value, :status)
 			end
 
 			private
@@ -41,7 +41,7 @@ module Api
         if !is_decimal(params[:invoice_value])
           return false
         end
-        if (params[:expiration_date].nil? and params[:enrollment_id].nil?)
+        if (params[:expiration_date].nil? and params[:enrolment_id].nil?)
           return false
         end
         if (params[:status].include? "open" || params[:status].include? "overdo" || params[:kind].include? "paid")
