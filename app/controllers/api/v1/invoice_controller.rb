@@ -11,7 +11,12 @@ module Api
 				render(json: {status: 'Success', message:'Invoice', data: invoice}, status: :ok)
       end
 
-      def create
+			def create
+				if !params_allowed(invoice_params)
+          render(json: {status: 'ERROR', message:'Invoice could not be saved, these params are not allowed'}, status: :bad_request)
+          return
+				end
+
         invoice = Invoice.new(invoice_params)
 				if invoice.save
 					render(json: {status: 'SUCCESS', message:'Saved invoice', data: invoice}, status: :ok)

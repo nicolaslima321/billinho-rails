@@ -13,7 +13,7 @@ module Api
 
       def create
         if !params_allowed(student_params)
-          render(json: {status: 'ERROR', message:'Student could not be saved, params are not allowed'}, status: :bad_request)
+          render(json: {status: 'ERROR', message:'Student could not be saved, these params are not allowed'}, status: :bad_request)
           return
         end
 

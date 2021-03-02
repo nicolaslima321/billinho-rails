@@ -13,7 +13,7 @@ module Api
 
       def create
         if !params_allowed(enrrolment_params)
-          render(json: {status: 'ERROR', message:'Enrrolment could not be saved, params are not allowed'}, status: :bad_request)
+          render(json: {status: 'ERROR', message:'Enrrolment could not be saved, these params are not allowed'}, status: :bad_request)
           return
         end
 
