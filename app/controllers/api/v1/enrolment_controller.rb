@@ -23,7 +23,7 @@ module Api
           return
         end
         
-        if create_invoices(params)
+        if create_invoices(enrolment)
           render(json: {status: 'SUCCESS', message:'Saved enrolment and invoices successfully', data: enrolment}, status: :ok)
         else
           render(json: {status: 'ERROR', message:'Some of invoices could not be saved'}, status: :bad_request)
@@ -42,10 +42,6 @@ module Api
         invoice_quantity = enrolment[:invoice_quantity]
 
         for a in 1..invoice_quantity do
-          if (current_month == 12)
-            current_month = 0
-          end
-
           current_invoice = calculate_invoice(enrolment, current_month)
           puts current_invoice.inspect
           invoice = Invoice.new(current_invoice)
@@ -54,14 +50,18 @@ module Api
             return false
           end
 
-          current_month =+ 1
+          current_month += 1
+
+          if (current_month >= 12)
+            current_month = 1
+          end
         end
 
         return true
       end
 
       private
-			def calculate_invoice(enrolment, month)
+      def calculate_invoice(enrolment, month)
         invoice_value = enrolment[:total_price] / enrolment[:invoice_quantity]
 
         return ({
