@@ -21,7 +21,7 @@ module Api
 				if institution.save
 					render(json: {status: 'SUCCESS', message:'Saved institution', data: institution}, status: :ok)
 				else
-					render(json: {status: 'ERROR', message:'Institution not saved', data: institution.erros}, status: :unprocessable_entity)
+					render(json: {status: 'ERROR', message:'Institution not saved', data: institution.errors}, status: :unprocessable_entity)
 				end
       end
 

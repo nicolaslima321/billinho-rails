@@ -19,7 +19,7 @@ module Api
 
         enrolment = Enrolment.new(enrolment_params)
 				if !enrolment.save
-          render(json: {status: 'ERROR', message:'Enrolment not saved', data: enrolment.erros}, status: :unprocessable_entity)
+          render(json: {status: 'ERROR', message:'Enrolment not saved', data: enrolment.errors}, status: :unprocessable_entity)
           return
         end
         

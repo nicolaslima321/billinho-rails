@@ -21,7 +21,7 @@ module Api
 				if student.save
 					render(json: {status: 'SUCCESS', message:'Saved student', data: student}, status: :ok)
 				else
-					render(json: {status: 'ERROR', message:'Student not saved', data: student.erros}, status: :unprocessable_entity)
+					render(json: {status: 'ERROR', message:'Student not saved', data: student.errors}, status: :unprocessable_entity)
 				end
       end
 

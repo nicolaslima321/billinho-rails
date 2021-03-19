@@ -5,4 +5,7 @@ class Enrolment < ApplicationRecord
     validates :student_id, presence: true
     validates :total_price, presence: true
     validates :expiration_day, presence: true
+    has_many :invoice
+    has_many :student
+    belongs_to :institution
 end

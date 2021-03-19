@@ -3,4 +3,5 @@ class Student < ApplicationRecord
     validates :genre, presence: true
     validates :name, presence: true
     validates :payment_method, presence: true
+    belongs_to :enrolment
 end

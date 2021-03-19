@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_224850) do
     t.integer "expiration_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["institution_id"], name: "index_enrolments_on_institution_id"
+    t.index ["student_id"], name: "index_enrolments_on_student_id"
   end
 
   create_table "institutions", force: :cascade do |t|
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_224850) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["enrolment_id"], name: "index_invoices_on_enrolment_id"
   end
 
   create_table "students", force: :cascade do |t|
