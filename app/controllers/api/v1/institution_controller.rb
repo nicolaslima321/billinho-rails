@@ -44,7 +44,7 @@ module Api
         if (params[:name].nil?)
           return false
         end
-        if (params[:kind].include? "universidade" || params[:kind].include? "escola" || params[:kind].include? "creche")
+        if (params[:kind] != "universidade" && params[:kind] != "escola" && params[:kind] != "creche")
           return false
         end
 

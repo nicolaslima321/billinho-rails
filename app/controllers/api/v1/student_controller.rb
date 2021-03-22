@@ -41,10 +41,10 @@ module Api
         if !is_numeric(params[:cpf])
           return false
         end
-        if (params[:genre] != 'M' || params[:genre] != 'F')
+        if (params[:genre] != 'M' && params[:genre] != 'F')
           return false
         end
-        if (params[:payment_method] != 'credit_card' || params[:payment_method] != 'bank_slip')
+        if (params[:payment_method] != 'credit_card' && params[:payment_method] != 'bank_slip')
           return false
         end
 
