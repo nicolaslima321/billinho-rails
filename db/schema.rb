@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_224850) do
     t.string "payment_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_students_on_cpf", unique: true
+    t.index ["name"], name: "index_students_on_name", unique: true
   end
 
 end

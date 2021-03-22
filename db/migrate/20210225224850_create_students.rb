@@ -10,5 +10,8 @@ class CreateStudents < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :students, :name, unique: true
+    add_index :students, :cpf, unique: true
   end
 end
