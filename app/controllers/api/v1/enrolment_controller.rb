@@ -41,6 +41,10 @@ module Api
         current_month = DateTime.now().month
         invoice_quantity = enrolment[:invoice_quantity]
 
+        if (DateTime.now().day <= expiration_day) do
+          current_month += 1
+        end
+
         for a in 1..invoice_quantity do
           current_invoice = calculate_invoice(enrolment, current_month)
           puts current_invoice.inspect
